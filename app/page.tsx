@@ -10,6 +10,9 @@ export default function Home() {
   const signInWithGoogle = async () => {
     await supabase.auth.signInWithOAuth({
       provider: "google",
+  options: {
+    redirectTo: "https://smart-bookmark-app-puce-three.vercel.app/dashboard",
+  },
     });
   };
 
